@@ -1,3 +1,99 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+
+
+@theme {
+    --breakpoint-lg: 62rem;
+    /* 992px */
+    --breakpoint-sm: 30rem;
+    /* 480px */
+}
+
+@layer components {
+
+    .responsive {
+        @apply py-9 max-lg:px-9 max-md:px-7 max-sm:px-5
+    }
+
+    .containerr {
+        @apply max-w-[1140px] m-auto px-4
+    }
+
+    .containerr2 {
+        @apply max-w-[1140px] m-auto px-24 max-lg:px-9
+    }
+
+    .headings {
+        @apply text-[#0087db] capitalize text-3xl
+    }
+
+}
+
+.mobile-nav {
+    @apply w-full
+}
+
+.top-short-nav>ul>li {
+    @apply flex text-[#02ade0] font-medium gap-2 mb-7
+}
+
+.nav-btn-type1 {
+    @apply text-white font-medium rounded-[6px] px-3 py-2 capitalize cursor-pointer bg-[#52ad7b] hover:bg-[#0c716d]
+}
+
+.nav-btn-type2 {
+    @apply text-white font-medium rounded-[6px] px-3 py-2 capitalize cursor-pointer bg-[#0087db] hover:bg-[#02ade0]
+}
+
+.nav-list {
+    @apply border-b-[2px] border-b-[transparent] hover:border-b-[2px] hover:border-b-[#0087db] cursor-pointer py-[18px] hover:text-[#0087db]
+}
+
+.footer-ul {
+    @apply flex flex-col gap-6 mt-5 font-medium
+}
+
+.footer-heading {
+    @apply text-[#52ad7b] text-xl uppercase max-md:text-center
+}
+
+.footer-ul>li {
+    @apply overflow-hidden max-md:w-fit max-md:m-auto  
+}
+
+.footer-ul>li {
+    padding: 5px 0;
+}
+
+.footer-ul>li>a {
+    position: relative;
+    padding: 5px 0;
+    display: inline-block;
+}
+
+.footer-ul>li>a::before {
+    content: '';
+    display: block;
+    left: 0;
+    bottom: 0;
+    background: white;
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    transform: translateX(-101%);
+    transition: all 0.3s ease;
+}
+
+.footer-ul>li>a:hover::before {
+    transform: translateX(0%);
+    opacity: 1;
+}
+
+.footer-ul>li>a:hover {
+    color: #55d7f0;
+
+}
+
+.imgWidth>img {
+    @apply max-md:w-[120px] mx-auto
+}
