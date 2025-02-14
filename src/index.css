@@ -29,12 +29,34 @@
 
 }
 
+.customer-section{
+    @apply bg-[#eceff0] p-5 flex flex-col gap-3
+}
+
+.customer-section h3{
+    @apply font-bold text-sm text-[#052d4b]
+}
+
+.customer-section p{
+    @apply text-sm 
+}
+
+.customer-section span{
+    @apply text-[#02ade0] font-bold
+}
 .mobile-nav {
     @apply w-full
 }
 
+.mobile-language p{
+    @apply p-3  hover:bg-[#002841]
+}
+
+.top-short-nav>ul {
+    @apply flex flex-col text-[#02ade0] font-medium gap-8  
+}
 .top-short-nav>ul>li {
-    @apply flex text-[#02ade0] font-medium gap-2 mb-7
+    @apply flex items-center text-[#02ade0] font-medium gap-2  
 }
 
 .nav-btn-type1 {
